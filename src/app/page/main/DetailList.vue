@@ -423,11 +423,13 @@ export default {
       const list = this.lists[this.rightClickedListIndex]
       const selectedItems = []
       list.tabs.forEach((tab, tabIndex) => {
-        if (tab.selected) selectedItems.push({
+        if (tab.selected) {
+          selectedItems.push({
           // for avoid to change old functions
-          listIndex: this.rightClickedListIndex,
-          tabIndex,
-        })
+            listIndex: this.rightClickedListIndex,
+            tabIndex,
+          })
+        }
       })
       return selectedItems
     },
